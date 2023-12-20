@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class TwoSum {
 
-    static void hasPair(int arr[], int sum) {
+    static void hasPair(int[] arr, int sum) {
 
         HashSet<Integer> s = new HashSet<Integer>();
         for (int i = 0; i < arr.length; ++i) {
@@ -21,24 +21,24 @@ public class TwoSum {
         System.out.println("No");
     }
 
-    static int[] findTwoSum(int[] nums, int sum) {
+    static int[] findTwoSum(int[] arr, int sum) {
         Map<Integer, Integer> numMap = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            int temp = sum - nums[i];
+        for (int i = 0; i < arr.length; i++) {
+            int temp = sum - arr[i];
             if (numMap.containsKey(temp)) {
                 return new int[]{numMap.get(temp), i};
             } else {
-                numMap.put(nums[i], i);
+                numMap.put(arr[i], i);
             }
         }
         return new int[]{};
     }
 
     public static void main(String[] args) {
-        int Arr[] = {1, 4, 45, 6, 10, 8};
+        int[] arr = {1, 4, 45, 6, 10, 8};
         int sum = 16;
-        hasPair(Arr, sum);
-        int[] index = findTwoSum(Arr, sum);
+        hasPair(arr, sum);
+        int[] index = findTwoSum(arr, sum);
         System.out.print("Index ");
         Arrays.stream(index).forEach(e -> System.out.print(e + " "));
 //        Arrays.stream(index).forEach(System.out::println);
