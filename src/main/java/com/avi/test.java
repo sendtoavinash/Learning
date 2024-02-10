@@ -1,27 +1,16 @@
 package com.avi;
 
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import static java.lang.String.format;
-
 public class test {
 
     public static void main(String[] args) {
-        System.out.println(new Date().getTime());
+//        System.out.println(new Date().getTime());
 
-        List<String> list = Arrays.asList("pen", "pinneapple", "apple", "pen");
-        Map<String, Long> countMap = list.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-        System.out.println(countMap);
+  /*      String s1 = new String("hello");
+        String s2 = "hello";
+        String s3 = s1.intern();//returns string from pool, now it will be same as s2
+        System.out.println(s1 == s2);//false because reference variables are pointing to different instance
+        System.out.println(s2 == s3);//true because reference variables are pointing to same instance*/
 
-        countMap.forEach((key, value) -> {
-            if (value > 1) {
-                System.out.println(format("key: %s, value: %s", key, value));
-            }
-        });
+
     }
 }

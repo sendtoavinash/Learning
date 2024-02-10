@@ -1,7 +1,6 @@
 package com.avi;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class StreamDriver {
 
@@ -63,19 +62,47 @@ public class StreamDriver {
 //        map.put("b", 1);
 //        map.put("c", 2);
 //
-//        LinkedHashMap<String, Integer> sortedMap = map.entrySet().stream().sorted(Comparator.comparingInt(Map.Entry::getValue))
-//                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+////        LinkedHashMap<String, Integer> sortedMap = map.entrySet().stream().sorted(Comparator.comparingInt(Map.Entry::getValue))
+////                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+////        System.out.println(sortedMap);
 //
-//        System.out.println(sortedMap);
+//        map.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(System.out::println);
+
 
         ////////////find all the Integer start from 1
 
-        List<Integer> list = Arrays.asList(11, 56, 110, 111, 86, 19);
+//        List<Integer> list = Arrays.asList(11, 56, 110, 111, 86, 19);
+//
+//        List<String> newList = list.stream().map(e -> e + "").filter(e -> e.startsWith("1")).toList();
+//
+//        System.out.println(newList);
 
-        List<String> newList = list.stream().map(e -> e + "").filter(e -> e.startsWith("1")).toList();
+        ////////////sort an array in decresing order distinct element
 
-        System.out.println(newList);
+//        int[] arr = {1, 3, 6, 4, 1, 2};
+//        List<Integer> UniqueNumbers = Arrays.stream(arr).boxed().distinct().sorted(Comparator.reverseOrder()).toList();
+//        System.out.println(UniqueNumbers);
 
+        ///////all elements having same characters
+
+        String[] arr = {"abcd", "java", "dcba", "ajav", "xyz", "epam", "pame", "aepm"};
+        //        contains same character
+        //         [epam, pame, aepm] [java, ajav] [abcd, dcba]
+
+        Map<String, List<String>> map = new HashMap<String, List<String>>();
+
+        for (String word : arr) {
+            char[] c = word.toCharArray();
+            Arrays.sort(c);
+            String sortedWord = new String(c);
+
+            map.putIfAbsent(sortedWord, new ArrayList<>());
+
+            map.get(sortedWord).add(word);
+        }
+        System.out.println(new ArrayList<>(map.values()));
+
+        ////
 
     }
 }

@@ -40,9 +40,13 @@ public class AesCbcEncryption {
         String password = "Campa@2004";
 
         // Create a JSON object with the given username and password
-        String jsonData = "{\"username\": \"" + username + "\",\n" +
-                "\"password\": \"" + password + "\"\n" +
-                "}";
+//        String jsonData = "{\"username\": \"" + username + "\",\n" +
+//                "\"password\": \"" + password + "\"\n" +
+//                "}";
+        String jsonData = """
+                {username: " + username ,
+                "password: " + password }
+                """;
         System.out.println("Original Text: " + jsonData);
 
         String encryptedText = encrypt(jsonData);
