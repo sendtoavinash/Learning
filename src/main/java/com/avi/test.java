@@ -11,6 +11,5 @@ public class test {
         System.out.println(s1 == s2);//false because reference variables are pointing to different instance
         System.out.println(s2 == s3);//true because reference variables are pointing to same instance*/
 
-
     }
 }

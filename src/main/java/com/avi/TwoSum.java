@@ -7,6 +7,19 @@ import java.util.Map;
 
 public class TwoSum {
 
+    public static void main(String[] args) {
+        int[] arr = {1, 4, 45, 6, 10, 8};
+        int sum = 16;
+        /////Ques check whether is has pair
+        hasPair(arr, sum);
+
+        /////Ques find the the index
+        int[] index = findTwoSum(arr, sum);
+        System.out.print("Index:- ");
+        Arrays.stream(index).forEach(e -> System.out.print(e + " "));
+
+    }
+
     static void hasPair(int[] arr, int sum) {
 
         HashSet<Integer> s = new HashSet<Integer>();
@@ -34,14 +47,4 @@ public class TwoSum {
         return new int[]{};
     }
 
-    public static void main(String[] args) {
-        int[] arr = {1, 4, 45, 6, 10, 8};
-        int sum = 16;
-        hasPair(arr, sum);
-        int[] index = findTwoSum(arr, sum);
-        System.out.print("Index ");
-        Arrays.stream(index).forEach(e -> System.out.print(e + " "));
-//        Arrays.stream(index).forEach(System.out::println);
-
-    }
 }

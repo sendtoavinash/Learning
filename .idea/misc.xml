@@ -5,6 +5,12 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../Services/cloud-config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/../Services/cloud-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/../Services/hystrix-dashboard/pom.xml" />
+        <option value="$PROJECT_DIR$/../Services/service-registry/pom.xml" />
+        <option value="$PROJECT_DIR$/../Services/department-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../Services/user-service/pom.xml" />
       </list>
     </option>
   </component>
