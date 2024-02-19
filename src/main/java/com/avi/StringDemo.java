@@ -2,7 +2,7 @@ package com.avi;
 
 import java.text.ParseException;
 
-public class Demo {
+public class StringDemo {
     public static void main(String[] args) throws ParseException {
 
 //        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/YYYY");

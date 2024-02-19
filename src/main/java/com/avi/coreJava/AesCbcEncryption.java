@@ -1,4 +1,4 @@
-package com.avi;
+package com.avi.coreJava;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;

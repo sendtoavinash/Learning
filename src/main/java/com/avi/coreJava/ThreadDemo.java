@@ -1,4 +1,4 @@
-package com.avi;
+package com.avi.coreJava;
 
 class Hi extends Thread {
 

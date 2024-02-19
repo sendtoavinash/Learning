@@ -1,4 +1,4 @@
-package com.avi;
+package com.avi.coreJava;
 
 import static java.lang.Thread.currentThread;
 

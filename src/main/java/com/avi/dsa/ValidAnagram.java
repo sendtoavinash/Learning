@@ -1,4 +1,4 @@
-package com.avi;
+package com.avi.dsa;
 
 import java.util.Arrays;
 

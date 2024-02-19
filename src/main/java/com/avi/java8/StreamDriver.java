@@ -1,7 +1,8 @@
-package com.avi;
+package com.avi.java8;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class StreamDriver {
 
@@ -173,11 +174,11 @@ public class StreamDriver {
 
         ////////// Reverse each word of a string using Java 8 streams?
 
-     /*   String str = "Java Concept Of The Day";
-
-        String reversedStr = Arrays.stream(str.split(" ")).map(word -> new StringBuffer(word).reverse()).collect(Collectors.joining(" "));
-
-        System.out.println(reversedStr);   */
+//        String str = "Java Concept Of The Day";
+//
+//        String reversedStr = Arrays.stream(str.split(" ")).map(word -> new StringBuffer(word).reverse()).collect(Collectors.joining(" "));
+//
+//        System.out.println(reversedStr);
 
         ///////// How do you find sum of first 10 natural numbers?
 
@@ -258,11 +259,11 @@ public class StreamDriver {
 
         ///////////// How do you get last element of an array?
 
-        List<String> listOfStrings = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six");
-
-        String lastElement = listOfStrings.stream().skip(listOfStrings.size()-1 ).findFirst().get();
-
-        System.out.println(lastElement);
+//        List<String> listOfStrings = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six");
+//
+//        String lastElement = listOfStrings.stream().skip(listOfStrings.size()-1 ).findFirst().get();
+//
+//        System.out.println(lastElement);
 
         //////////////  Find the age of a person in years if the birthday has given?
 
@@ -271,7 +272,13 @@ public class StreamDriver {
 //
 //        System.out.println(ChronoUnit.YEARS.between(birthDay, today));
 
-        /////////////
+        ////////// Reverse each word of a string using Java 8 streams?
+
+        String str = "Java Concept Of The Day";
+
+        String reversedStr = Arrays.stream(str.split(" ")).map(word -> new StringBuffer(word)).collect(Collectors.joining(" "));
+
+        System.out.println(reversedStr);
 
 
     }
