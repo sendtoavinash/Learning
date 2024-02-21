@@ -1,8 +1,7 @@
 package com.avi.java8;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class StreamDriver {
 
@@ -276,10 +275,11 @@ public class StreamDriver {
 
         String str = "Java Concept Of The Day";
 
-        String reversedStr = Arrays.stream(str.split(" ")).map(word -> new StringBuffer(word)).collect(Collectors.joining(" "));
+        String[] wordArray = str.split(" ");
+
+        String reversedStr = IntStream.rangeClosed(1, wordArray.length).mapToObj(i -> wordArray[wordArray.length - i]).map(word -> new StringBuffer(word)).collect(Collectors.joining(" "));
 
         System.out.println(reversedStr);
-
 
     }
 

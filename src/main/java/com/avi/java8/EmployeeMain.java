@@ -1,7 +1,7 @@
 package com.avi.java8;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class EmployeeMain {
     public static void main(String[] args) {
@@ -27,6 +27,58 @@ public class EmployeeMain {
         employeeList.add(new Employee(277, "Anuj Chettiar", 31, "Male", "Product Development", 2012, 35700.0));
 
 
+        //////// male and female employees are there in the organization?
+//        Map<String, Long> maleFemaleEmployees = employeeList.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
+//        System.out.println(maleFemaleEmployees);
+
+        ////// name of all departments in the organization?
+//        employeeList.stream().map(Employee::getDepartment).distinct().forEach(System.out::println);
+
+        ////// average age of male and female employees?
+//        Map<String, Double> avgAge = employeeList.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingInt(Employee::getAge)));
+//        System.out.println(avgAge);
+
+        /////// details of highest paid employee in the organization?
+//        Optional<Employee> maxSalary = employeeList.stream().max(Comparator.comparingDouble(Employee::getSalary));
+//        System.out.println(maxSalary);
+
+        /////// names of all employees who have joined after 2015?
+//        employeeList.stream().filter(e -> e.getYearOfJoining() > 2015).map(Employee::getName).forEach(System.out::println);
+
+        /////// number of employees in each department?
+//        Map<String, Long> empByDepartment = employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartment, Collectors.counting()));
+//        empByDepartment.entrySet().stream().forEach(System.out::println);
+
+        /////// average salary of each department?
+//        Map<String, Double> avgSalaryByDepartment = employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.averagingDouble(Employee::getSalary)));
+//        avgSalaryByDepartment.entrySet().stream().forEach(System.out::println);
+
+        /////// youngest male employee in the product development department?
+
+//        Optional<Employee> youngestMale = employeeList.stream().filter(e -> e.getGender() == "Male" && e.getDepartment() == "Product Development").min(Comparator.comparingInt(Employee::getAge));
+//        youngestMale.ifPresent(System.out::println);
+
+        //////// most working experience in the organization?
+//        Optional<Employee> mostExperience = employeeList.stream().sorted(Comparator.comparingInt(Employee::getYearOfJoining)).findFirst();
+//        mostExperience.ifPresent(System.out::println);
+
+        ////////  male and female employees are there in the sales and marketing team?
+//        Map<String, Long> countMaleFemaleEmployeesInSalesMarketing = employeeList.stream().filter(e -> e.getDepartment() == "Sales And Marketing").collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
+//        countMaleFemaleEmployeesInSalesMarketing.entrySet().forEach(System.out::println);
+
+        /////// average salary of male and female employees?
+//        Map<String, Double> avgSalary = employeeList.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingDouble(Employee::getSalary)));
+//        System.out.println(avgSalary);
+
+        ///////  List down the names of all employees in each department?
+//        Map<String, List<Employee>> empEachDepartment = employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartment));
+//        Set<Map.Entry<String, List<Employee>>> empEachDepartmentSet = empEachDepartment.entrySet();
+//        empEachDepartmentSet.forEach(System.out::println);
+
+        /////// average salary and total salary of the whole organization?
+//        DoubleSummaryStatistics employeeSalaryStatistics = employeeList.stream().collect(Collectors.summarizingDouble(Employee::getSalary));
+//        System.out.println("Average salary " + employeeSalaryStatistics.getAverage());
+//        System.out.println("Total Salary " + employeeSalaryStatistics.getSum());
 
 
     }
