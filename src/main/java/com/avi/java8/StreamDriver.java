@@ -165,11 +165,11 @@ public class StreamDriver {
 
         /////////// How do you find common elements between two arrays?
 
-      /*  List<Integer> list1 = Arrays.asList(71, 21, 34, 89, 56, 28);
-
-        List<Integer> list2 = Arrays.asList(12, 56, 17, 21, 94, 34);
-
-        list1.stream().filter(list2::contains).forEach(System.out::println);  */
+//        List<Integer> list1 = Arrays.asList(71, 21, 34, 89, 56, 28);
+//
+//        List<Integer> list2 = Arrays.asList(12, 56, 17, 21, 94, 34);
+//
+//        list1.stream().filter(list2::contains).forEach(System.out::println);
 
         ////////// Reverse each word of a string using Java 8 streams?
 
@@ -197,15 +197,15 @@ public class StreamDriver {
 
         /////////// How do you find the most repeated element in an array?
 
-    /*    List<String> listOfStrings = Arrays.asList("Pen", "Eraser", "Note Book", "Pen", "Pencil", "Pen", "Note Book", "Pencil");
-
-        Map<String, Long> elementCountMap = listOfStrings.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-
-        Map.Entry<String, Long> mostFrequentElement = elementCountMap.entrySet().stream().max(Map.Entry.comparingByValue()).get();
-
-        System.out.println("Most Frequent Element : " + mostFrequentElement.getKey());
-
-        System.out.println("Count : " + mostFrequentElement.getValue());  */
+//        List<String> listOfStrings = Arrays.asList("Pen", "Eraser", "Note Book", "Pen", "Pencil", "Pen", "Note Book", "Pencil");
+//
+//        Map<String, Long> elementCountMap = listOfStrings.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+//
+//        Map.Entry<String, Long> mostFrequentElement = elementCountMap.entrySet().stream().max(Map.Entry.comparingByValue()).get();
+//
+//        System.out.println("Most Frequent Element : " + mostFrequentElement.getKey());
+//
+//        System.out.println("Count : " + mostFrequentElement.getValue());
 
         //////////// Palindrome program using Java 8 streams
 
