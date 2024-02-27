@@ -10,15 +10,13 @@ public class SellStock {
     public static int maxProfit(int[] prices) {
         int l = Integer.MAX_VALUE;
         int maxProfit = 0;
-        int profit = 0;
 
         for (int i = 0; i < prices.length; i++) {
             if (prices[i] < l) {
                 l = prices[i];
             }
-            profit = prices[i] - l;
-            if (maxProfit < profit) {
-                maxProfit = profit;
+            if (maxProfit < prices[i] - l) {
+                maxProfit = prices[i] - l;
             }
         }
         return maxProfit;

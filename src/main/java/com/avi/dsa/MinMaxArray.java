@@ -14,13 +14,11 @@ public class MinMaxArray {
         int min = Integer.MIN_VALUE;
 
         for (int i = 0; i < arr.length; i++) {
-
             if (max < arr[i]) {
                 secondMax = max;
                 max = arr[i];
             } else if (secondMax < arr[i] && max != arr[i]) {
                 secondMax = arr[i];
-
             } else {
                 min = arr[i];
             }

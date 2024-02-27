@@ -15,13 +15,12 @@ public class TwoSum {
 
         /////Ques find the the index
         int[] index = findTwoSum(arr, sum);
-        System.out.print("Index:- ");
-        Arrays.stream(index).forEach(e -> System.out.print(e + " "));
+
+        System.out.println(Arrays.toString(index));
 
     }
 
     static void hasPair(int[] arr, int sum) {
-
         HashSet<Integer> s = new HashSet<Integer>();
         for (int i = 0; i < arr.length; ++i) {
             int temp = sum - arr[i];
