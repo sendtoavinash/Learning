@@ -27,14 +27,14 @@ public class Recursion {
 //        addElement(list, n);
 //    }
 
-    /////// Print 1 to N
+    /////// Print 1 to N  Backtracking
 //    static void func(int i, int n) {
 //        if (i > n) return;
 //        System.out.println(i);
 //        func(i + 1, n);
 //    }
 
-    /////// Print N to 1
+    /////// Print N to 1 Backtracking
 //    static void func(int i, int n){
 //        if(i<1) return;
 //        System.out.println(i);
