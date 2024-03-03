@@ -1,5 +1,7 @@
 package com.avi.java8;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -50,18 +52,20 @@ public class StreamDriver {
 
         //////////////list of integers, print the numbers which are multiples of 5
 
-      /*  List<Integer> listOfIntegers = Arrays.asList(45, 12, 56, 15, 24, 75, 31, 89);
-
-        listOfIntegers.stream().filter(i->i%5==0).forEach(System.out::println);*/
+//        List<Integer> listOfIntegers = Arrays.asList(45, 12, 56, 15, 24, 75, 31, 89);
+//
+//        listOfIntegers.stream().filter(i->i%5==0).forEach(System.out::println);
 
         /////////////Sort a HashMap based on values
 
-     /*   Map<String, Integer> map = new HashMap<>();
-        map.put("a", 3);
-        map.put("b", 1);
-        map.put("c", 2);
-
-        map.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(System.out::println);  */
+//        Map<String, Integer> map = new HashMap<>();
+//        map.put("a", 3);
+//        map.put("b", 1);
+//        map.put("c", 2);
+//
+//        map.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(System.out::println);
+//
+//        System.out.println(map.entrySet().stream().max(Map.Entry.comparingByValue()).get().getValue());
 
         ///////////find all the Integer start from 1
 
@@ -273,13 +277,15 @@ public class StreamDriver {
 
         ////////// Reverse each word of a string using Java 8 streams?
 
-        String str = "Java Concept Of The Day";
+//        String str = "Java Concept Of The Day";
+//
+//        String[] wordArray = str.split(" ");
+//
+//        String reversedStr = IntStream.rangeClosed(1, wordArray.length).mapToObj(i -> wordArray[wordArray.length - i]).map(word -> new StringBuffer(word)).collect(Collectors.joining(" "));
+//
+//        System.out.println(reversedStr);
 
-        String[] wordArray = str.split(" ");
 
-        String reversedStr = IntStream.rangeClosed(1, wordArray.length).mapToObj(i -> wordArray[wordArray.length - i]).map(word -> new StringBuffer(word)).collect(Collectors.joining(" "));
-
-        System.out.println(reversedStr);
 
     }
 
