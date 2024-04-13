@@ -1,9 +1,9 @@
 package com.avi.java8;
 
-import java.util.HashMap;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class StreamDriver {
 
@@ -11,11 +11,11 @@ public class StreamDriver {
 
         ///////////////////////list of integers, separate odd and even numbers
 
-    /*    List<Integer> listOfIntegers = Arrays.asList(71, 18, 42, 21, 67, 32, 95, 14, 56, 87);
+        List<Integer> listOfIntegers = Arrays.asList(71, 18, 42, 21, 67, 32, 95, 14, 56, 87);
         Map<Boolean, List<Integer>> oddEvenNumbersMap = listOfIntegers.stream().collect(Collectors.partitioningBy(i -> i % 2 == 0));
         System.out.println(oddEvenNumbersMap);
         System.out.println(oddEvenNumbersMap.get(true));
-        System.out.println(oddEvenNumbersMap.get(false));  */
+        System.out.println(oddEvenNumbersMap.get(false));
 
         //////////////////remove duplicate elements from a list using Java 8 streams
 
