@@ -97,10 +97,6 @@ public class Employee {
                 '}';
     }
 
-    public int hashcode() {
-        return id;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -108,6 +104,11 @@ public class Employee {
         Employee employee = (Employee) o;
         return id == employee.id && age == employee.age && yearOfJoining == employee.yearOfJoining && Double.compare(employee.salary, salary) == 0 && Objects.equals(name, employee.name) && Objects.equals(gender, employee.gender) && Objects.equals(department, employee.department);
     }
+
+    public int hashcode() {
+        return id;
+    }
+
 
     @Override
     public int hashCode() {
