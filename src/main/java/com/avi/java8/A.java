@@ -1,13 +1,13 @@
 package com.avi.java8;
 
 @FunctionalInterface
-public interface A {
+interface A {
     int x = 20;
+
+    void alpha();
 
     static void fun(int x) {
         System.out.println(x);
     }
-
-    void alpha();
 
 }

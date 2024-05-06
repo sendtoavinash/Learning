@@ -1,21 +1,16 @@
 package com.avi.java8;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-
 public class StreamDriver {
 
     public static void main(String[] args) {
 
         ///////////////////////list of integers, separate odd and even numbers
 
-        List<Integer> listOfIntegers = Arrays.asList(71, 18, 42, 21, 67, 32, 95, 14, 56, 87);
-        Map<Boolean, List<Integer>> oddEvenNumbersMap = listOfIntegers.stream().collect(Collectors.partitioningBy(i -> i % 2 == 0));
-        System.out.println(oddEvenNumbersMap);
-        System.out.println(oddEvenNumbersMap.get(true));
-        System.out.println(oddEvenNumbersMap.get(false));
+//        List<Integer> listOfIntegers = Arrays.asList(71, 18, 42, 21, 67, 32, 95, 14, 56, 87);
+//        Map<Boolean, List<Integer>> oddEvenNumbersMap = listOfIntegers.stream().collect(Collectors.partitioningBy(i -> i % 2 == 0));
+//        System.out.println(oddEvenNumbersMap);
+//        System.out.println(oddEvenNumbersMap.get(true));
+//        System.out.println(oddEvenNumbersMap.get(false));
 
         //////////////////remove duplicate elements from a list using Java 8 streams
 
@@ -29,26 +24,26 @@ public class StreamDriver {
 
         /////////////find frequency of each character in a string
 
-     /*   String inputString = "Java Concept Of The Day";
-
-        Map<Character, Long> charCountMap = inputString.chars().mapToObj(c -> (char) c)
-                        .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-
-        System.out.println(charCountMap); */
+//        String inputString = "Java Concept Of The Day";
+//
+//        Map<Character, Long> charCountMap = inputString.chars().mapToObj(c -> (char) c)
+//                        .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+//
+//        System.out.println(charCountMap);
 
         //////////frequency of each element in an array or a list
 
-     /*   List<String> stationeryList = Arrays.asList("Pen", "Eraser", "Note Book", "Pen", "Pencil", "Stapler", "Note Book", "Pencil");
-
-        Map<String, Long> stationeryCountMap = stationeryList.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-
-        System.out.println(stationeryCountMap);
-        ////////////Print the repeating items in list
-        stationeryCountMap.forEach((key, value) -> {
-            if (value > 1) {
-                System.out.println(format("key: %s, value: %s", key, value));
-            }
-        }); */
+//        List<String> stationeryList = Arrays.asList("Pen", "Eraser", "Note Book", "Pen", "Pencil", "Stapler", "Note Book", "Pencil");
+//
+//        Map<String, Long> stationeryCountMap = stationeryList.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+//
+//        System.out.println(stationeryCountMap);
+//        ////////////Print the repeating items in list
+//        stationeryCountMap.forEach((key, value) -> {
+//            if (value > 1) {
+//                System.out.println(format("key: %s, value: %s", key, value));
+//            }
+//        });
 
         //////////////list of integers, print the numbers which are multiples of 5
 
@@ -69,103 +64,103 @@ public class StreamDriver {
 
         ///////////find all the Integer start from 1
 
-        /*List<Integer> list = Arrays.asList(11, 56, 110, 111, 86, 19);
-
-        List<String> newList = list.stream().map(e -> e + "").filter(e -> e.startsWith("1")).toList();
-
-        System.out.println(newList);*/
+//        List<Integer> list = Arrays.asList(11, 56, 110, 111, 86, 19);
+//
+//        List<String> newList = list.stream().map(e -> e + "").filter(e -> e.startsWith("1")).toList();
+//
+//        System.out.println(newList);
 
         ////////////sort an array in decresing order distinct element
-        /*  int[] arr = {1, 3, 6, 4, 1, 2};
-
-        List<Integer> UniqueNumbers = Arrays.stream(arr).boxed().distinct().sorted(Comparator.reverseOrder()).toList();
-
-        System.out.println(UniqueNumbers);  */
+//          int[] arr = {1, 3, 6, 4, 1, 2};
+//
+//        List<Integer> UniqueNumbers = Arrays.stream(arr).boxed().distinct().sorted(Comparator.reverseOrder()).toList();
+//
+//        System.out.println(UniqueNumbers);
 
         ///////all elements having same characters
 
-       /* String[] arr = {"abcd", "java", "dcba", "ajav", "xyz", "epam", "pame", "aepm"};
-        //        contains same character
-        //         [epam, pame, aepm] [java, ajav] [abcd, dcba]
-
-        Map<String, List<String>> map = new HashMap<String, List<String>>();
-
-        for (String word : arr) {
-            char[] c = word.toCharArray();
-            Arrays.sort(c);
-            String sortedWord = new String(c);
-
-            map.putIfAbsent(sortedWord, new ArrayList<>());
-
-            map.get(sortedWord).add(word);
-        }
-        System.out.println(new ArrayList<>(map.values())); */
+//        String[] arr = {"abcd", "java", "dcba", "ajav", "xyz", "epam", "pame", "aepm"};
+//        //        contains same character
+//        //         [epam, pame, aepm] [java, ajav] [abcd, dcba]
+//
+//        Map<String, List<String>> map = new HashMap<String, List<String>>();
+//
+//        for (String word : arr) {
+//            char[] c = word.toCharArray();
+//            Arrays.sort(c);
+//            String sortedWord = new String(c);
+//
+//            map.putIfAbsent(sortedWord, new ArrayList<>());
+//
+//            map.get(sortedWord).add(word);
+//        }
+//        System.out.println(new ArrayList<>(map.values()));
 
         /////////Given a list of integers, find maximum and minimum of those numbers?
 
-      /*  List<Integer> listOfIntegers = Arrays.asList(45, 12, 56, 15, 24, 75, 31, 89);
-
-        List<Integer> newList = listOfIntegers.stream().sorted().toList();
-
-        System.out.println("Min:-" + newList.get(0) + " Max:-" + newList.get(newList.size() - 1));  */
+//        List<Integer> listOfIntegers = Arrays.asList(45, 12, 56, 15, 24, 75, 31, 89);
+//
+//        List<Integer> newList = listOfIntegers.stream().sorted().toList();
+//
+//        System.out.println("Min:-" + newList.get(0) + " Max:-" + newList.get(newList.size() - 1));
 
         ///////////How do you merge two unsorted arrays into single sorted array using Java 8 streams
 
-      /*  int[] a = {4, 2, 7, 1};
-        int[] b = {8, 3, 9, 5};
-
-        int[] c = IntStream.concat(Arrays.stream(a), Arrays.stream(b)).sorted().toArray();
-
-        System.out.println(Arrays.toString(c));  */
+//        int[] a = {4, 2, 7, 1};
+//        int[] b = {8, 3, 9, 5};
+//
+//        int[] c = IntStream.concat(Arrays.stream(a), Arrays.stream(b)).sorted().toArray();
+//
+//        System.out.println(Arrays.toString(c));
 
         /////////////How do you get three maximum numbers and three minimum numbers from the given list of integers?
 
-     /*   List<Integer> listOfIntegers = Arrays.asList(45, 12, 56, 15, 24, 75, 31, 89);
-        System.out.println("3 Minimun numbers");
-        listOfIntegers.stream().sorted().limit(3).forEach(System.out::println);
-        System.out.println("3 Maximun numbers");
-        listOfIntegers.stream().sorted(Comparator.reverseOrder()).limit(3).forEach(System.out::println);  */
+//        List<Integer> listOfIntegers = Arrays.asList(45, 12, 56, 15, 24, 75, 31, 89);
+//        System.out.println("3 Minimun numbers");
+//        listOfIntegers.stream().sorted().limit(3).forEach(System.out::println);
+//        System.out.println("3 Maximun numbers");
+//        listOfIntegers.stream().sorted(Comparator.reverseOrder()).limit(3).forEach(System.out::println);
 
         ////////////Java 8 program to check if two strings are anagrams or not
 
-     /*   String s1 = "RaceCar";
-        String s2 = "CarRace";
-
-        s1 = Stream.of(s1.split("")).map(String::toUpperCase).sorted().collect(Collectors.joining());
-        s2 = Stream.of(s2.split("")).map(String::toUpperCase).sorted().collect(Collectors.joining());
-
-        if (s1.equals(s2))
-            System.out.println("Valid Anagram");
-        else
-            System.out.println("Not an Anagram");  */
+//        String s1 = "RaceCar";
+//        String s2 = "CarRace";
+//
+//        s1 = Stream.of(s1.split("")).map(String::toUpperCase).sorted().collect(Collectors.joining());
+//        s2 = Stream.of(s2.split("")).map(String::toUpperCase).sorted().collect(Collectors.joining());
+//
+//        if (s1.equals(s2))
+//            System.out.println("Valid Anagram");
+//        else
+//            System.out.println("Not an Anagram");
 
         ///////////////Find sum of all digits of a number in Java 8
 
-     /*   int i = 15623;
-
-        Integer sum = Stream.of(String.valueOf(i).split("")).mapToInt(Integer::parseInt).sum();
-
-        System.out.println(sum);  */
+//        int i = 15623;
+//
+//        Integer sum = Stream.of(String.valueOf(i).split("")).mapToInt(Integer::parseInt).sum();
+//
+//        System.out.println(sum);
 
         ////////////Find second largest number in an integer array?
 
-     /*   List<Integer> listOfIntegers = Arrays.asList(45, 12, 56, 15, 24, 75, 31, 89);
-
-        System.out.println(listOfIntegers.stream().sorted(Comparator.reverseOrder()).skip(1).findFirst().get()); */
+//        List<Integer> listOfIntegers = Arrays.asList(45, 12, 56, 15, 24, 75, 31, 89);
+//
+//        System.out.println(listOfIntegers.stream().sorted(Comparator.reverseOrder()).skip(1).findFirst().get());
 
         //////////// Given a list of strings, sort them according to increasing order of their length?
 
-    /*    List<String> listOfStrings = Arrays.asList("Java", "Python", "C#", "HTML", "Kotlin", "C++", "COBOL", "C");
-
-        listOfStrings.stream().sorted(Comparator.comparing(String::length)).forEach(System.out::println);  */
+//        List<String> listOfStrings = Arrays.asList("Java", "Python", "C#", "HTML", "Kotlin", "C++", "COBOL", "C");
+//
+//        listOfStrings.stream().sorted(Comparator.comparing(String::length)).forEach(System.out::println);
 
         /////////// Given an integer array, find sum and average of all elements?
 
-     /*   int[] a = {45, 12, 56, 15, 24, 75, 31, 89};
-
-        System.out.println(Arrays.stream(a).sum());
-
-        System.out.println(Arrays.stream(a).average().getAsDouble());  */
+//        int[] a = {45, 12, 56, 15, 24, 75, 31, 89};
+//
+//        System.out.println(Arrays.stream(a).sum());
+//
+//        System.out.println(Arrays.stream(a).average().getAsDouble());
 
         /////////// How do you find common elements between two arrays?
 
@@ -185,15 +180,15 @@ public class StreamDriver {
 
         ///////// How do you find sum of first 10 natural numbers?
 
-      /*  int sum = IntStream.range(1, 11).sum();
-        System.out.println(sum);  */
+//        int sum = IntStream.range(1, 11).sum();
+//        System.out.println(sum);
 
         //////////// Reverse an integer array
-     /*   int[] array = {5, 1, 7, 3, 9, 6};
-
-        int[] reversedArray = IntStream.rangeClosed(1, array.length).map(i -> array[array.length - i]).toArray();
-
-        System.out.println(Arrays.toString(reversedArray));   */
+//        int[] array = {5, 1, 7, 3, 9, 6};
+//
+//        int[] reversedArray = IntStream.rangeClosed(1, array.length).map(i -> array[array.length - i]).toArray();
+//
+//        System.out.println(Arrays.toString(reversedArray));
 
         //////////// Print first 10 even numbers
 
@@ -213,17 +208,17 @@ public class StreamDriver {
 
         //////////// Palindrome program using Java 8 streams
 
-    /*    String str = "ROTATOR";
-
-        boolean isItPalindrome = IntStream.range(0, str.length() / 2).noneMatch(i -> str.charAt(i) != str.charAt(str.length() - i - 1));
-
-        System.out.println(isItPalindrome);   */
+//        String str = "ROTATOR";
+//
+//        boolean isItPalindrome = IntStream.range(0, str.length() / 2).noneMatch(i -> str.charAt(i) != str.charAt(str.length() - i - 1));
+//
+//        System.out.println(isItPalindrome);
 
         //////////// Given a list of strings, find out those strings which start with a number?
 
-      /*  List<String> listOfStrings = Arrays.asList("One", "2wo", "3hree", "Four", "5ive", "Six");
-
-        listOfStrings.stream().filter(str -> Character.isDigit(str.charAt(0))).forEach(System.out::println);  */
+//        List<String> listOfStrings = Arrays.asList("One", "2wo", "3hree", "Four", "5ive", "Six");
+//
+//        listOfStrings.stream().filter(str -> Character.isDigit(str.charAt(0))).forEach(System.out::println);
 
         //////////// How do you extract duplicate elements from an array?
 
@@ -284,7 +279,6 @@ public class StreamDriver {
 //        String reversedStr = IntStream.rangeClosed(1, wordArray.length).mapToObj(i -> wordArray[wordArray.length - i]).map(word -> new StringBuffer(word)).collect(Collectors.joining(" "));
 //
 //        System.out.println(reversedStr);
-
 
 
     }
