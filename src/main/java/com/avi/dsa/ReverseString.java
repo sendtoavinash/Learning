@@ -19,6 +19,22 @@ public class ReverseString {
         return output.toString();
     }
 
+    public static String reverseUsingSwap(String str) {
+
+        char[] charArray = str.toCharArray();
+        int left = 0;
+        int right = charArray.length - 1;
+        while (left < right) {
+            char temp = charArray[left];
+            charArray[left] = charArray[right];
+            charArray[right] = temp;
+            left++;
+            right--;
+        }
+        String reversedString = new String(charArray);
+        return reversedString;
+    }
+
     public static String reverseUsingStreamOfMethod(String str) {
         if (str == null) {
             return null;
