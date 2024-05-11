@@ -25,7 +25,7 @@ public class Main {
 
 //        List<Person> ls = p.stream().sorted(Comparator.reverseOrder()).toList();
 
-        List<Person> l = p.stream().sorted(Comparator.comparingInt(Person::getAge).reversed()).toList();
+        p.stream().sorted(Comparator.comparingInt(Person::getAge).reversed()).forEach(System.out::println);
 
 /*
         EmployeeInfo[EmpId, EmpFname, EmpLname, Department, Project, Address, DOB, Gender]
