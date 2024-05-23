@@ -1,7 +1,7 @@
 package com.avi.java8;
 
-import java.util.Arrays;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class StreamDriver {
 
@@ -175,11 +175,11 @@ public class StreamDriver {
 
         ////////// Reverse each word of a string using Java 8 streams?
 
-        String str = "Java Concept Of The Day";
-
-        String reversedStr = Arrays.stream(str.split(" ")).map(word -> new StringBuffer(word).reverse()).collect(Collectors.joining(" "));
-
-        System.out.println(reversedStr);
+//        String str = "Java Concept Of The Day";
+//
+//        String reversedStr = Arrays.stream(str.split(" ")).map(word -> new StringBuffer(word).reverse()).collect(Collectors.joining(" "));
+//
+//        System.out.println(reversedStr);
 
         ///////// How do you find sum of first 10 natural numbers?
 
@@ -275,13 +275,16 @@ public class StreamDriver {
 
         ////////// Reverse each word of a string using Java 8 streams?
 
-//        String str = "Java Concept Of The Day";
-//
-//        String[] wordArray = str.split(" ");
-//
-//        String reversedStr = IntStream.rangeClosed(1, wordArray.length).mapToObj(i -> wordArray[wordArray.length - i]).map(word -> new StringBuffer(word)).collect(Collectors.joining(" "));
-//
-//        System.out.println(reversedStr);
+        String str = "Java Concept Of The Day";
+//        String str = "Java";
+
+        String[] wordArray = str.split(" ");
+
+        String reversedStr = IntStream.rangeClosed(1, wordArray.length)
+                .mapToObj(i -> wordArray[wordArray.length - i]).map(word -> new StringBuffer(word))
+                .collect(Collectors.joining(" "));
+
+        System.out.println(reversedStr);
 
 
     }
