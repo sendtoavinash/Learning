@@ -1,6 +1,6 @@
-package com.avi;
+package com.avi.dsa;
 
-public class Main {
+public class CountPairs {
 
     static int pair(String str) {
         int i = 0;
@@ -28,8 +28,8 @@ public class Main {
 //        {}=1
 //        {{}=1
 //        }{=0
-//            {{}}=2
-//            {{{}}}=3
+//        {{}}=2
+//        {{{}}}=3
 
         System.out.println(pair("}{"));
 
