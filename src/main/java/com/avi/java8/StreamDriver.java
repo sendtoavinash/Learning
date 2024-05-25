@@ -1,7 +1,9 @@
 package com.avi.java8;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class StreamDriver {
 
@@ -275,18 +277,29 @@ public class StreamDriver {
 
         ////////// Reverse each word of a string using Java 8 streams?
 
-        String str = "Java Concept Of The Day";
-//        String str = "Java";
+//        String str = "Java Concept Of The Day";
+////        String str = "Java";
+//
+//        String[] wordArray = str.split(" ");
+//
+//        String reversedStr = IntStream.rangeClosed(1, wordArray.length)
+//                .mapToObj(i -> wordArray[wordArray.length - i]).map(word -> new StringBuffer(word))
+//                .collect(Collectors.joining(" "));
+//
+//        System.out.println(reversedStr);
 
-        String[] wordArray = str.split(" ");
+        /////////Create Hashmap from a list
 
-        String reversedStr = IntStream.rangeClosed(1, wordArray.length)
-                .mapToObj(i -> wordArray[wordArray.length - i]).map(word -> new StringBuffer(word))
-                .collect(Collectors.joining(" "));
+        List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Alpha", "George");
 
-        System.out.println(reversedStr);
+        Map<Character, String> nameMap = names.stream()
+                .collect(Collectors.toMap(
+                        name -> name.charAt(0), // Key: first character of the name
+                        name -> name,           // Value: the name itself
+                        (existing, replacement) -> existing // Handling duplicates: keep the existing value
+                ));
 
-
+        System.out.println(nameMap);
     }
 
 

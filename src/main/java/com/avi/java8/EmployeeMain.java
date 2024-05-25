@@ -1,7 +1,7 @@
 package com.avi.java8;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EmployeeMain {
     public static void main(String[] args) {
@@ -79,6 +79,14 @@ public class EmployeeMain {
 //        DoubleSummaryStatistics employeeSalaryStatistics = employeeList.stream().collect(Collectors.summarizingDouble(Employee::getSalary));
 //        System.out.println("Average salary " + employeeSalaryStatistics.getAverage());
 //        System.out.println("Total Salary " + employeeSalaryStatistics.getSum());
+
+
+        /////// compare age then name
+////        employeeList.stream().sorted(Comparator.comparing(Employee::getAge)).thenComparing(Employee::getName);
+//
+//          Comparator<Employee> employee_Age_Name_Comparator
+//                = Comparator.comparing(Employee::getAge)
+//                .thenComparing(Employee::getName);
 
 
     }
