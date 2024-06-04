@@ -2,6 +2,8 @@ package com.avi.java8;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class EmployeeMain {
     public static void main(String[] args) {
@@ -28,8 +30,8 @@ public class EmployeeMain {
 
 
         //////// male and female employees are there in the organization?
-//        Map<String, Long> maleFemaleEmployees = employeeList.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
-//        System.out.println(maleFemaleEmployees);
+        Map<String, Long> maleFemaleEmployees = employeeList.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
+        System.out.println(maleFemaleEmployees);
 
         ////// name of all departments in the organization?
 //        employeeList.stream().map(Employee::getDepartment).distinct().forEach(System.out::println);
