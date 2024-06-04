@@ -1,18 +1,19 @@
 package com.avi.dsa;
 
+import java.util.Arrays;
+
 public class ArrayRotate {
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6};
         int k = 2;
 
-//        rotateRight(arr, k);
+        rotateRight(arr, k);
 //        rotateLeft(arr, k);
-        rotate(arr, k);
+//        rotate(arr, k);
     }
 
     public static void rotateRight(int[] arr, int k) {
-
         int l = arr.length;
         int[] temp = new int[l];
         int j = 0;
@@ -26,13 +27,11 @@ public class ArrayRotate {
             temp[j] = arr[i];
             j++;
         }
-        System.arraycopy(temp, 0, arr, 0, l);
 
-        printTheArray(arr);
+        Arrays.stream(temp).forEach(System.out::print);
     }
 
     public static void rotateLeft(int[] arr, int k) {
-
         int l = arr.length;
         int[] temp = new int[l];
         int j = 0;
@@ -46,20 +45,18 @@ public class ArrayRotate {
             temp[j] = arr[i];
             j++;
         }
-        System.arraycopy(temp, 0, arr, 0, l);
 
-        printTheArray(arr);
+        Arrays.stream(temp).forEach(System.out::print);
     }
 
-    public static void rotate(int[] nums, int k) {
-
-        int l = nums.length;
+    public static void rotate(int[] arr, int k) {
+        int l = arr.length;
         k %= l;
-        reverse(nums, 0, l - 1);
-        reverse(nums, 0, k - 1);
-        reverse(nums, k, l - 1);
+        reverse(arr, 0, l - 1);
+        reverse(arr, 0, k - 1);
+        reverse(arr, k, l - 1);
 
-        printTheArray(nums);
+        Arrays.stream(arr).forEach(System.out::print);
     }
 
     public static void reverse(int[] a, int start, int end) {
@@ -72,9 +69,4 @@ public class ArrayRotate {
         }
     }
 
-    static void printTheArray(int[] arr) {
-        for (Integer i : arr) {
-            System.out.print(i + " ");
-        }
-    }
 }
