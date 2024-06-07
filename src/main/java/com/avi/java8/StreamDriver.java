@@ -1,8 +1,6 @@
 package com.avi.java8;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class StreamDriver {
@@ -227,13 +225,13 @@ public class StreamDriver {
 
         //////////// How do you extract duplicate elements from an array?
 
-//        List<Integer> listOfIntegers = Arrays.asList(111, 222, 333, 111, 555, 333, 777, 222);
-//
-//        Set<Integer> uniqueSetOfIntegers = new HashSet<>();
-//
-//        Set<Integer> duplicates = listOfIntegers.stream().filter(i -> !uniqueSetOfIntegers.add(i)).collect(Collectors.toSet());
-//
-//        System.out.println(duplicates);
+        List<Integer> listOfIntegers = Arrays.asList(111, 222, 333, 111, 555, 333, 777, 222);
+
+        Set<Integer> uniqueSetOfIntegers = new HashSet<>();
+
+        Set<Integer> duplicates = listOfIntegers.stream().filter(i -> !uniqueSetOfIntegers.add(i)).collect(Collectors.toSet());
+
+        System.out.println(duplicates);
 
         /////////// Print duplicate characters in a string?
 
@@ -290,16 +288,17 @@ public class StreamDriver {
 
         /////////Create Hashmap from a list
 
-        List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Alpha", "George");
+//        List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Alpha", "George");
+//
+//        Map<Character, String> nameMap = names.stream()
+//                .collect(Collectors.toMap(
+//                        name -> name.charAt(0), // Key: first character of the name
+//                        name -> name,           // Value: the name itself
+//                        (existing, replacement) -> existing // Handling duplicates: keep the existing value
+//                ));
+//
+//        System.out.println(nameMap);
 
-        Map<Character, String> nameMap = names.stream()
-                .collect(Collectors.toMap(
-                        name -> name.charAt(0), // Key: first character of the name
-                        name -> name,           // Value: the name itself
-                        (existing, replacement) -> existing // Handling duplicates: keep the existing value
-                ));
-
-        System.out.println(nameMap);
     }
 
 

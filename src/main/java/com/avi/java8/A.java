@@ -6,8 +6,12 @@ interface A {
 
     void alpha();
 
+    default void beta() {
+        System.out.println("Inside default " + x);
+    }
+
     static void fun(int x) {
-        System.out.println(x);
+        System.out.println("Inside static " + x);
     }
 
 }

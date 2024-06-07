@@ -41,5 +41,4 @@ public class StringDemo {
     public static boolean isNullBlankString(String string) {
         return string == null || string.isBlank();
     }
-
 }
