@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class topKFrequentElements {
+public class TopKFrequentElements {
 
     public static void main(String[] args) {
 
