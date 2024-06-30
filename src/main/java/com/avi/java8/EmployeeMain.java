@@ -90,6 +90,10 @@ public class EmployeeMain {
 //                = Comparator.comparing(Employee::getAge)
 //                .thenComparing(Employee::getName);
 
+        ////////// Average Salary of employee greater than 25 years old
+//
+//        System.out.println(employeeList.stream().filter(i->i.getAge()>25).collect(Collectors.averagingDouble(Employee::getSalary)));
+
 
     }
 }

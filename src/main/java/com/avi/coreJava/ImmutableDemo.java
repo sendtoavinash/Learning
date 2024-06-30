@@ -26,7 +26,7 @@ final class Student {
         this.metadata = tempMap;
     }
 
-        public String getName() {
+    public String getName() {
         return name;
     }
 
@@ -34,10 +34,6 @@ final class Student {
         return regNo;
     }
 
-    // Note that there should not be any setters
-
-    // User -defined type
-    // To get meta data
     public Map<String, String> getMetadata() {
 
         // Creating Map with HashMap reference
