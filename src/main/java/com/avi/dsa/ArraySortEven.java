@@ -1,6 +1,6 @@
 package com.avi.dsa;
 
-public class SortArrayEven {
+public class ArraySortEven {
 
     public static void main(String[] args) {
         int[] arr = {1, 3, 45, 2, 67, 10};
