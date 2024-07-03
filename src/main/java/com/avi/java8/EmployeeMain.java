@@ -1,6 +1,7 @@
 package com.avi.java8;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -91,8 +92,10 @@ public class EmployeeMain {
 //                .thenComparing(Employee::getName);
 
         ////////// Average Salary of employee greater than 25 years old
-//
 //        System.out.println(employeeList.stream().filter(i->i.getAge()>25).collect(Collectors.averagingDouble(Employee::getSalary)));
+
+        ////////// sort employee on the bases of names
+        employeeList.stream().sorted(Comparator.comparing(Employee::getName)).forEach(System.out::println);
 
 
     }
