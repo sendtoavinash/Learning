@@ -1,7 +1,6 @@
 package com.avi.coreJava;
 
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
+import java.util.concurrent.*;
 
 public class CompletableFutureExample {
     public static void main(String[] args) {
@@ -28,5 +27,16 @@ public class CompletableFutureExample {
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
+    }
+}
+
+class SquareCalculator {
+    private ExecutorService executor = Executors.newSingleThreadExecutor();
+
+    public Future<Integer> calculate(Integer input) {
+        return executor.submit(() -> {
+            Thread.sleep(1000); // Simulate some processing time
+            return input * input;
+        });
     }
 }
