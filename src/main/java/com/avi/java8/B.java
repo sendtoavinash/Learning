@@ -15,6 +15,11 @@ public class B extends E implements A {
     public static void main(String[] args) {
         E b = new B();
         b.abc();
+
+        F f = (a) -> {
+            System.out.println(a);
+        };
+        f.name("B");
     }
 
 

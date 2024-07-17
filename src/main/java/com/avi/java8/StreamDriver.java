@@ -2,6 +2,7 @@ package com.avi.java8;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class StreamDriver {
 
@@ -167,11 +168,11 @@ public class StreamDriver {
 
         /////////// How do you find common elements between two arrays?
 
-        List<Integer> list1 = Arrays.asList(71, 21, 34, 89, 56, 28);
-
-        List<Integer> list2 = Arrays.asList(12, 56, 17, 21, 94, 34);
-
-        list1.stream().filter(list2::contains).forEach(System.out::println);
+//        List<Integer> list1 = Arrays.asList(71, 21, 34, 89, 56, 28);
+//
+//        List<Integer> list2 = Arrays.asList(12, 56, 17, 21, 94, 34);
+//
+//        list1.stream().filter(list2::contains).forEach(System.out::println);
 
         ////////// Reverse each word of a string using Java 8 streams?
 
@@ -187,11 +188,11 @@ public class StreamDriver {
 //        System.out.println(sum);
 
         //////////// Reverse an integer array
-//        int[] array = {5, 1, 7, 3, 9, 6};
+        int[] array = {5, 1, 7, 3, 9, 6};
+
+        int[] reversedArray = IntStream.rangeClosed(1, array.length).map(i -> array[array.length - i]).toArray();
 //
-//        int[] reversedArray = IntStream.rangeClosed(1, array.length).map(i -> array[array.length - i]).toArray();
-//
-//        System.out.println(Arrays.toString(reversedArray));
+        System.out.println(Arrays.toString(reversedArray));
 
         //////////// Print first 10 even numbers
 
@@ -225,13 +226,13 @@ public class StreamDriver {
 
         //////////// How do you extract duplicate elements from an array?
 
-        List<Integer> listOfIntegers = Arrays.asList(111, 222, 333, 111, 555, 333, 777, 222);
-
-        Set<Integer> uniqueSetOfIntegers = new HashSet<>();
-
-        Set<Integer> duplicates = listOfIntegers.stream().filter(i -> !uniqueSetOfIntegers.add(i)).collect(Collectors.toSet());
-
-        System.out.println(duplicates);
+//        List<Integer> listOfIntegers = Arrays.asList(111, 222, 333, 111, 555, 333, 777, 222);
+//
+//        Set<Integer> uniqueSetOfIntegers = new HashSet<>();
+//
+//        Set<Integer> duplicates = listOfIntegers.stream().filter(i -> !uniqueSetOfIntegers.add(i)).collect(Collectors.toSet());
+//
+//        System.out.println(duplicates);
 
         /////////// Print duplicate characters in a string?
 
@@ -275,16 +276,16 @@ public class StreamDriver {
 
         ////////// Reverse each word of a string using Java 8 streams?
 
-//        String str = "Java Concept Of The Day";
-////        String str = "Java";
-//
-//        String[] wordArray = str.split(" ");
-//
-//        String reversedStr = IntStream.rangeClosed(1, wordArray.length)
-//                .mapToObj(i -> wordArray[wordArray.length - i]).map(word -> new StringBuffer(word))
-//                .collect(Collectors.joining(" "));
-//
-//        System.out.println(reversedStr);
+        String str = "Java Concept Of The Day";
+//        String str = "Java";
+
+        String[] wordArray = str.split(" ");
+
+        String reversedStr = IntStream.rangeClosed(1, wordArray.length)
+                .mapToObj(i -> wordArray[wordArray.length - i]).map(word -> new StringBuffer(word))
+                .collect(Collectors.joining(" "));
+
+        System.out.println(reversedStr);
 
         /////////Create Hashmap from a list
 
