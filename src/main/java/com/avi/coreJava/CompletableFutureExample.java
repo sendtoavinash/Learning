@@ -30,13 +30,3 @@ public class CompletableFutureExample {
     }
 }
 
-class SquareCalculator {
-    private ExecutorService executor = Executors.newSingleThreadExecutor();
-
-    public Future<Integer> calculate(Integer input) {
-        return executor.submit(() -> {
-            Thread.sleep(1000); // Simulate some processing time
-            return input * input;
-        });
-    }
-}
