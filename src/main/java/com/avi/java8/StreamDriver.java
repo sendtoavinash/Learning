@@ -188,11 +188,11 @@ public class StreamDriver {
 //        System.out.println(sum);
 
         //////////// Reverse an integer array
-        int[] array = {5, 1, 7, 3, 9, 6};
-
-        int[] reversedArray = IntStream.rangeClosed(1, array.length).map(i -> array[array.length - i]).toArray();
+//        int[] array = {5, 1, 7, 3, 9, 6};
 //
-        System.out.println(Arrays.toString(reversedArray));
+//        int[] reversedArray = IntStream.rangeClosed(1, array.length).map(i -> array[array.length - i]).toArray();
+////
+//        System.out.println(Arrays.toString(reversedArray));
 
         //////////// Print first 10 even numbers
 
@@ -261,11 +261,11 @@ public class StreamDriver {
 
         ///////////// How do you get last element of an array?
 
-//        List<String> listOfStrings = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six");
-//
-//        String lastElement = listOfStrings.stream().skip(listOfStrings.size()-1 ).findFirst().get();
-//
-//        System.out.println(lastElement);
+        List<String> listOfStrings = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six");
+
+        String lastElement = listOfStrings.stream().skip(listOfStrings.size()-1 ).findFirst().get();
+
+        System.out.println(lastElement);
 
         //////////////  Find the age of a person in years if the birthday has given?
 
