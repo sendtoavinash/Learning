@@ -2,10 +2,6 @@ package com.avi.dsa;
 
 public class LinkedList {
 
-    private Node head;
-    private Node tail;
-    private int length;
-
     class Node {
         int value;
         Node next;
@@ -15,12 +11,9 @@ public class LinkedList {
         }
     }
 
-    public LinkedList(int value) {
-        Node newNode = new Node(value);
-        head = newNode;
-        tail = newNode;
-        length = 1;
-    }
+    private Node head;
+    private Node tail;
+    private int length;
 
     public Node getHead() {
         return head;
@@ -32,6 +25,13 @@ public class LinkedList {
 
     public int getLength() {
         return length;
+    }
+
+    public LinkedList(int value) {
+        Node newNode = new Node(value);
+        head = newNode;
+        tail = newNode;
+        length = 1;
     }
 
     public void printList() {
@@ -183,7 +183,18 @@ public class LinkedList {
             before = temp;
             temp = after;
         }
+    }
 
+    public Node findMiddleNode() {
+        Node slow = head;
+        Node fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+
+        }
+        return slow;
     }
 
 }
