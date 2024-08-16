@@ -1,6 +1,7 @@
 package com.avi.java8;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -263,7 +264,7 @@ public class StreamDriver {
 
         List<String> listOfStrings = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six");
 
-        String lastElement = listOfStrings.stream().skip(listOfStrings.size()-1 ).findFirst().get();
+        String lastElement = listOfStrings.stream().skip(listOfStrings.size() - 1).findFirst().get();
 
         System.out.println(lastElement);
 
@@ -299,6 +300,23 @@ public class StreamDriver {
 //                ));
 //
 //        System.out.println(nameMap);
+
+        ////////get Kth highest occuring elements
+
+//        int[] arr = {1, 1, 2, 2, 5, 5, 5, 4};
+//        int k = 3;
+//
+//        Arrays.stream(arr)
+//                .boxed()
+//                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+//                .entrySet()
+//                .stream()
+//                .sorted(Map.Entry.<Integer, Long>comparingByValue().reversed())
+//                .limit(k)
+//                .forEach(i -> {
+//                    System.out.println(i.getKey() + "=" + i.getValue());
+//                });
+
 
     }
 
