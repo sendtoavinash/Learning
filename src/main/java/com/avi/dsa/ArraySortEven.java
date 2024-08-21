@@ -15,17 +15,14 @@ public class ArraySortEven {
         int right = arr.length - 1;
 
         while (left < right) {
-            // Move left pointer to the right while it points to even numbers
             while (left < right && arr[left] % 2 == 0) {
                 left++;
             }
 
-            // Move right pointer to the left while it points to odd numbers
             while (left < right && arr[right] % 2 != 0) {
                 right--;
             }
 
-            // Swap the elements at left and right pointers
             if (left < right) {
                 int temp = arr[left];
                 arr[left] = arr[right];
