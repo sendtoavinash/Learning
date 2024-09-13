@@ -1,9 +1,13 @@
 package com.avi;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.text.ParseException;
 
 public class StringDemo {
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args) throws ParseException, JsonProcessingException {
 
 //        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/YYYY");
 //        System.out.println(formatter.format(new Date()));
@@ -17,6 +21,18 @@ public class StringDemo {
 //        String originalInput = "password";
 //        String encodedString = Base64.getEncoder().encodeToString(originalInput.getBytes());
 //        System.out.println(encodedString);
+
+//        String x = """
+//                {"tranReceived":"N",
+//                "tranDate":"0001-01-01T00:00:00",
+//                "status":"99",
+//                "errorMsg":"TRAN DETAILS NOT AVAILABLE"}
+//                """;
+//
+//        ObjectMapper mapper = new ObjectMapper();
+//        JsonNode jsonNode = mapper.readTree(x);
+//        String dataValue = jsonNode.get("errorMsg").asText();
+//        System.out.println(dataValue);
 
         String test = null;
         System.out.println(isNullBlankString(test));
