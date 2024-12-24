@@ -10,7 +10,8 @@ public class Bubble {
             System.out.print(a + " ");
         }
         System.out.println();
-        sort(arr, n);
+//        sort(arr,n);
+        recursiveBubbleSort(arr, n);
     }
 
     static void sort(int[] arr, int n) {
@@ -27,6 +28,24 @@ public class Bubble {
         for (int a : arr) {
             System.out.print(a + " ");
         }
+    }
+
+    static void recursiveBubbleSort(int[] arr, int n) {
+        if (n <= 1) {
+            System.out.println("After sorting:");
+            for (int a : arr) {
+                System.out.print(a + " ");
+            }
+            return;
+        }
+        for (int i = 0; i < n - 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+                int temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
+            }
+        }
+        recursiveBubbleSort(arr, n - 1);
     }
 
 }

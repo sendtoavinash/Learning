@@ -4,16 +4,16 @@ public class Selection {
 
     public static void main(String[] args) {
         int arr[] = {13, 46, 24, 52, 20, 9};
-        int n = arr.length;
         System.out.println("Before sorting:");
         for (int a : arr) {
             System.out.print(a + " ");
         }
         System.out.println();
-        sort(arr, n);
+        sort(arr);
     }
 
-    static void sort(int[] arr, int n) {
+    static void sort(int[] arr) {
+        int n = arr.length;
         for (int i = 0; i < n; i++) {
             int min = i;
             for (int j = i + 1; j < n; j++) {
