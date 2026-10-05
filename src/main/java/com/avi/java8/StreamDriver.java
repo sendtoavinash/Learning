@@ -2,6 +2,8 @@ package com.avi.java8;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -200,7 +202,7 @@ public class StreamDriver {
 //        IntStream.rangeClosed(1, 10).map(i -> i * 2).forEach(System.out::println);
 
         /////////// How do you find the most repeated element in an array?
-
+//
 //        List<String> listOfStrings = Arrays.asList("Pen", "Eraser", "Note Book", "Pen", "Pencil", "Pen", "Note Book", "Pencil");
 //
 //        Map<String, Long> elementCountMap = listOfStrings.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
@@ -262,11 +264,11 @@ public class StreamDriver {
 
         ///////////// How do you get last element of an array?
 
-        List<String> listOfStrings = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six");
-
-        String lastElement = listOfStrings.stream().skip(listOfStrings.size() - 1).findFirst().get();
-
-        System.out.println(lastElement);
+//        List<String> listOfStrings = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six");
+//
+//        String lastElement = listOfStrings.stream().skip(listOfStrings.size() - 1).findFirst().get();
+//
+//        System.out.println(lastElement);
 
         //////////////  Find the age of a person in years if the birthday has given?
 
