@@ -6,12 +6,7 @@ import java.util.Map;
 public class Main {
 
     public static void main(String[] args) {
-        Map<String, String> map = new HashMap<>();
 
-        map.put(null, "value1");
-        map.put(null, "value2");
-
-        System.out.println(map.get(null));
 
     }
 
